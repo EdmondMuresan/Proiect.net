@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Angajati.AngajatPage"
+             Title="AngajatPage">
+
+    <StackLayout Margin="20">
+        <!-- Entry fields for Angajat details -->
+        <Entry Placeholder="Nume" Text="{Binding Nume}" />
+        <Entry Placeholder="Prenume" Text="{Binding Prenume}" />
+        <Entry Placeholder="Email" Text="{Binding Email}" />
+        <DatePicker x:Name="datePicker" Date="{Binding Data_nasterii}" />
+
+        <!-- Grid for Save and Delete buttons -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Save button -->
+            <Button Text="Save"
+                    IsEnabled="{Binding IsValid}" 
+                Clicked="OnSaveButtonClicked" />
+
+                <!-- Delete button -->
+                <Button Grid.Column="1"
+                    Text="Delete"
+                    Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

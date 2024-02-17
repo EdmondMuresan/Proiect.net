@@ -1,0 +1,75 @@
+/* Set the font size for the entire page */
+html {
+    font-size: 20px;
+}
+
+/* Media query for smaller screens */
+@media (min-width: 768px) {
+    html {
+        font-size: 15px;
+
+    }
+}
+
+/* Style the focus state for various elements */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* Set up the page structure */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+/* Style the navigation bar with a slightly transparent background */
+nav {
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust the transparency as needed */
+}
+
+/* Style the body with a pizza-themed background */
+body {
+    margin-bottom: 60px;
+    background-image: url("pizza.png");
+    background-size: 50px 50px;
+    background-repeat: repeat;
+    font-weight: bolder;
+}
+
+/* Style tables for better appearance */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Adjust the spacing between tables */
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #fff; /* White border for better visibility */
+}
+
+/* Define a pizza-themed color scheme */
+.primary-color {
+    background-color: #fdd835; /* Yellow */
+    color: #d32f2f; /* Red */
+}
+
+/* Apply the color scheme to specific elements (adjust as needed) */
+.btn.primary-color,
+.btn-link.nav-link.primary-color,
+.form-control.primary-color,
+.form-check-input.primary-color {
+    background-color: #fdd835;
+    color: #d32f2f;
+}
+
+/* Override any existing styles for links within tables (adjust as needed) */
+table a {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: bold;
+}

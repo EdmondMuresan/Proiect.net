@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Angajati.AngajatEntryPage"
+             Title="Angajat Entry Page">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add Angajat"
+                     Clicked="OnAngajatAddedClicked" />
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        
+        <Entry Placeholder="Prenume" x:Name="entryPrenume" />
+        <Entry Placeholder="Nume" x:Name="entryNume" />
+        <Entry Placeholder="Email" x:Name="entryEmail" />
+        <DatePicker x:Name="datePicker" />
+
+        
+        <Button Text="Add Angajat" Clicked="OnAddAngajatClicked" />
+
+        
+        <ListView x:Name="listView"
+                  Margin="20"
+                  ItemSelected="OnListViewItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Prenume}"
+                              Detail="{Binding Nume}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
